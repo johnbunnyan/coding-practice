@@ -1,11 +1,18 @@
-n = int(input())
+h, m = map(int,input().split())
 
-if n<=100 and n>=90: 
-    print('A')
-elif n<=89 and n>=80: 
-    print('B')
-elif n<=79 and n>=70: 
-    print('C')
-elif n<=69 and n>=60: 
-    print('D')
-else: print('F')
+# 시간 -> 분
+hourTomin = h * 60
+total = hourTomin + m
+
+# 전체 - 45
+adjust = total - 45
+
+# 분 -> 시간
+resultH = adjust // 60
+
+if resultH < 0:
+  resultH += 24
+resultM = adjust % 60
+
+print(str(resultH)+' '+str(resultM))
+
