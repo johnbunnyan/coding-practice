@@ -1,22 +1,21 @@
-#          ,r'"7
-# r`-_   ,'  ,/
-#  \. ". L_r'
-#    `~\/
-#       |
-#       |
+first = int(input())
+second = input()
+second_last = int(second[-1])
+second_mid = int(second[-2])
+second_first = int(second[-3])
 
-#          ,r'"7
-# r`-_   ,'  ,/
-#  \. ". L_r'
-#    `~\/
-#       |
-#       |
+# print(second_last)
+# print(second_mid)
+# print(second_first)
+
+third=first * second_last
+forth=first * second_mid * 10
+fifth=first * second_first * 100
+sixth=third+forth+fifth
+
+print(third)
+print(forth // 10)
+print(fifth // 100)
+print(sixth)
 
 
-# 따옴표 자체를 출력하려면 역슬래시\를 붙인다.
-print('         ,r\'"7')
-print('r`-_   ,\'  ,/')
-print(' \. ". L_r\'')
-print('   `~\/')
-print('      |')
-print('      |')
