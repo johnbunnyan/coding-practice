@@ -1,17 +1,13 @@
-A, B, C = list(map(int, input().split()))
-
-# (A+B)%C
-# ((A%C) + (B%C))%C
-# (A×B)%C
-# ((A%C) × (B%C))%C 
-
-first = (A+B)%C
-second = ((A%C) + (B%C))%C
-third = (A*B)%C
-forth = ((A%C) * (B%C))%C 
+# |\_/|
+# |q p|   /}
+# ( 0 )"""\
+# |"^"`    |
+# ||_/=\\__|
 
 
-print(first)
-print(second)
-print(third)
-print(forth)
+# 백슬래쉬는 두번 입력해야 하나로 출려된다
+print('|\_/|')
+print('|q p|   /}')
+print('( 0 )"""\\')
+print('|"^"`    |')
+print('||_/=\\\__|')
