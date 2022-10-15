@@ -1,18 +1,20 @@
-h, m = map(int,input().split())
+first, second, third = map(int,input().split())
 
-# 시간 -> 분
-hourTomin = h * 60
-total = hourTomin + m
+reward = 0
 
-# 전체 - 45
-adjust = total - 45
+if (first == second) and (second == third) and (first == third):
+  reward = 10000+first*1000
+  
+elif (first == second != third) or (second == third != first) or (first == third != second):
+  if first == second:
+    reward = 1000+first*100
+  elif second == third:
+    reward = 1000+second*100
+  elif first == third:
+    reward = 1000+third*100
 
-# 분 -> 시간
-resultH = adjust // 60
+elif (first != second) and (second != third) and (first != third):
+  largest = max(first, second, third)
+  reward = largest * 100
 
-if resultH < 0:
-  resultH += 24
-resultM = adjust % 60
-
-print(str(resultH)+' '+str(resultM))
-
+print(reward)
