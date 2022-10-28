@@ -1,12 +1,27 @@
+origin = input()
+originNum = int(origin)
+if originNum < 10:
+  origin = '0'+origin
+first= origin[0] 
+second= origin[1]
 
-while True:
-  try:
-    num1, num2 = map(int, input().split())
-    print(num1 + num2)
-  except EOFError:
-    break
+# newFirst=0
+# newSecond=int(second)
+new = ''
+count = 0
+
+while new != origin:
+  add = int(first)+int(second)
+  strAdd = str(add)
+  if add < 10: strAdd = '0'+strAdd
+  # print(strAdd,type(strAdd))
+  new = second + strAdd[1]
+  first = new[0]
+  second = new[1]
+  count += 1
+  # print(new)
 
 
-# 검색으로 해결
-# 파이썬 입력이 끝날때까지 받는 경우(End Of File, EOFerror)
-# https://velog.io/@kimjhq1/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9E%85%EB%A0%A5%EC%9D%B4-%EB%81%9D%EB%82%A0%EB%95%8C%EA%B9%8C%EC%A7%80-%EB%B0%9B%EB%8A%94-%EA%B2%BD%EC%9A%B0End-Of-File-EOFerror
+print(count)
+  
+
