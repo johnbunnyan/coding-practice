@@ -1,27 +1,16 @@
-origin = input()
-originNum = int(origin)
-if originNum < 10:
-  origin = '0'+origin
-first= origin[0] 
-second= origin[1]
+loop = int(input())
+# list()안쓰면 객체로 취급, list써줘야 인덱싱가능
+arr =  list(map(int,input().split()))
+target = int(input())
 
-# newFirst=0
-# newSecond=int(second)
-new = ''
-count = 0
+cnt = 0
 
-while new != origin:
-  add = int(first)+int(second)
-  strAdd = str(add)
-  if add < 10: strAdd = '0'+strAdd
-  # print(strAdd,type(strAdd))
-  new = second + strAdd[1]
-  first = new[0]
-  second = new[1]
-  count += 1
-  # print(new)
+for i in range(loop):
+
+  if arr[i] == target:
+    cnt += 1
 
 
-print(count)
-  
+print(cnt)
+
 
