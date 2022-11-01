@@ -1,16 +1,20 @@
-loop, condition = map(int,input().split())
+loop = int(input())
 
 arr =  list(map(int,input().split()))
 
 result=[]
 
-for i in range(loop):
+min = arr[0]
+max = arr[0]
 
-  if arr[i] < condition:
-    result.append(arr[i])
+for i in range(1,loop):
+
+  if arr[i] < min:
+    min = arr[i]
+  elif arr[i] > max:
+    max = arr[i]
     
 
-resultToStr=' '.join(str(e) for e in result)
-print(resultToStr)
+print(str(min) + ' ' + str(max))
 
 
