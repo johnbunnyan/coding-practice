@@ -1,20 +1,16 @@
-loop = int(input())
+# loop = int(input())
 
-arr =  list(map(int,input().split()))
+# arr =  list(map(int,input().split()))
 
-result=[]
+max = 0
+index=0
 
-min = arr[0]
-max = arr[0]
+for i in range(9):
+  num = int(input())
+  if num > max:
+    max = num
+    index = i+1
 
-for i in range(1,loop):
-
-  if arr[i] < min:
-    min = arr[i]
-  elif arr[i] > max:
-    max = arr[i]
+print(max)
+print(index)
     
-
-print(str(min) + ' ' + str(max))
-
-
