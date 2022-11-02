@@ -1,19 +1,16 @@
-divided = []
+total = int(input())
+arr = list(map(int, input().split()))
 
-for i in range(10):
-  num = int(input())
-  divide = num % 42
-  divided.append(divide)
+arr.sort()
 
-unique = set(divided)
-ln = len(unique)
+max = arr[-1]
 
-print(ln)
+newArr = []
 
+for i in range(len(arr)):
+  newNum = arr[i]/max*100
+  newArr.append(newNum)
 
-# <set사용>
-# names = ['Barry', 'Alice', 'Bob', 'Bob']
+avg = sum(newArr)/len(newArr)
+print(avg)
 
-# unique_names = set(names)
-# Result:
-# {'Alice', 'Barry', 'Bob'}
