@@ -1,33 +1,32 @@
+# <노트>
+# 1. 소수점 이후 자리 포메팅
+# https://seopark.tistory.com/24
+# 2. 반올림 메서드
+
+
 total = int(input())
 
 result = []
 
 for i in range(total):
-  text = list(input())
-  plus = 0
-  cnt=0
-  score=0
+  spread = list(map(int,input().split(' ')))
+  amount = spread[0]
+  students = spread[1:]
+  # print(amount)
+  # print(students)
+  avg = sum(students)/amount
+  # print("avg",avg)
 
-  for j in range(len(text)):
-    # print("score",score)
-    if text[j] == 'O':
-      plus += 1
-      cnt += plus
-      # print("Oplus",plus)
-      # print("Ocnt",cnt)
-    if text[j] == 'X':
-      score += cnt
-      cnt = 0
-      plus = 0
-      # print("Xplus",plus)
-      # print("Xcnt",cnt)
-    if j == len(text)-1:
-      score += cnt
-      cnt = 0
-      result.append(score)
+  # 평균넘는 학생 비율 = 평균넘는 수/전체수
+  overed=0
+  for j in range(amount):
+    if students[j] > avg:
+      overed += 1
 
-
-for i in range(len(result)):
-  print(result[i])
-      
-# 변수가 많으면 print로 변수추적하기를 주저하지 말자!
+    if j == amount-1:
+      rate = round(overed/amount*100,3)
+      formatting = format(rate,".3f")
+      print(str(formatting)+'%')
+    
+    
+  
