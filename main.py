@@ -1,4 +1,9 @@
-input = input()
-trans = ord(input)
+length = int(input())
+acc = 0
+num_to_add = input()
 
-print(trans)
+for digit in num_to_add:
+  acc += int(digit)
+
+
+print(acc)
